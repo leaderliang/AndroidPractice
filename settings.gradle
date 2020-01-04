@@ -1,0 +1,2 @@
+include ':App', ':AndroidPermission'
+rootProject.name='AndroidPractice'

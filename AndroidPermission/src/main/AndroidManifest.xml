@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.android.permission">
+
+
+    <!--第一种方式的  sharedUserId 在这个跨 app 跳转有何意义？？-->
+    <!--    android:sharedUserId="com.android.devliang"-->
+
+
+    <!--特殊权限-->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+
+    <!--危险权限-->
+    <uses-permission android:name="android.permission.WRITE_CONTACTS"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.READ_CALENDAR"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.BODY_SENSORS"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.READ_SMS"/>
+
+    <!--跨 app 打开 activity 的安全权限配置-->
+    <!--<permission android:name="com.devliang.test"/>-->
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!--        android:exported="true"-->
+        <!--android:permission="com.devliang.test"-->
+
+        <activity android:name=".MainActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+
+                <!--<action android:name="android.intent.action.VIEW"/>-->
+
+                <!--<action android:name="android.intent.test"/>
+                <category android:name="android.intent.category.DEFAULT"/>-->
+            </intent-filter>
+        </activity>
+
+    </application>
+
+</manifest>
