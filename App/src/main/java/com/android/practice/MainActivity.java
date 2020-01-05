@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent();
                 intent.setComponent(new ComponentName("com.android.permission",
-                        "com.android.permission.MainActivity"));
+                        "com.android.permission.SecondActivity"));
 //                intent.setAction("android.intent.test");
                 startActivity(intent);
             }
