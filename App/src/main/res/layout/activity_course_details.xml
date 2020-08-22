@@ -27,7 +27,7 @@
             <com.android.practice.MyViewPager
                 android:id="@+id/view_pager"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="700dp"
                 android:background="@color/colorAccent" />
 
             <!--预留空间 200dp-->
