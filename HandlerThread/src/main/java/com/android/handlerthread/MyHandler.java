@@ -10,7 +10,7 @@ import androidx.annotation.NonNull;
 /**
  * TODO
  *
- *  Handler存在一个构造函数，传入一个Looper对象，Handler的handleMessage获取的是Looper的MessageQueue中的Message
+ *  Handler存在一个构造函数，传入一个Looper对象，Handler 的 handleMessage 获取的是Looper的MessageQueue中的Message
  *  因此，handleMessage的调用与Looper对象同属于一个线程，这里我们在构造时传入HandlerThread的Looper对象，
  *
  *  handleMessage运行于HandlerThread线程（也就是一个子线程），所以Handler虽然是在主线程创建，但是它的
