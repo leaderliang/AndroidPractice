@@ -45,6 +45,8 @@ public class CourseDetailsActivity extends AppCompatActivity {
         mIndicator = findViewById(R.id.view_indicator);
         mViewPager = findViewById(R.id.view_pager);
 
+//        mViewPager.setNestedScrollingEnabled(false);
+
         FragmentManager fragmentManager = getSupportFragmentManager();
         mPagerAdapter = new MyPagerFragmentAdapter(fragmentManager, mDataList);
         initMagicIndicator();

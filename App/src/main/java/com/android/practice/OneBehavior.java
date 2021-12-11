@@ -22,17 +22,45 @@ public class OneBehavior extends CoordinatorLayout.Behavior {
     }
 
 
+    /**
+     * 页面停止滑动
+     * @param coordinatorLayout
+     * @param child
+     * @param target
+     * @param type
+     */
     @Override
     public void onStopNestedScroll(@NonNull CoordinatorLayout coordinatorLayout, @NonNull View child, @NonNull View target, int type) {
         super.onStopNestedScroll(coordinatorLayout, child, target, type);
     }
 
+    /**
+     * 页面开始滑动
+     * @param coordinatorLayout
+     * @param child
+     * @param directTargetChild
+     * @param target
+     * @param axes
+     * @param type
+     * @return
+     */
     @Override
     public boolean onStartNestedScroll(@NonNull CoordinatorLayout coordinatorLayout, @NonNull View child, @NonNull View directTargetChild, @NonNull View target, int axes, int type) {
         //如果是水平移动的话响应响应的事件
         return axes == ViewCompat.SCROLL_AXIS_VERTICAL || super.onStartNestedScroll(coordinatorLayout, child, directTargetChild, target, axes, type);
     }
 
+    /**
+     * 页面正在滑动
+     * @param coordinatorLayout
+     * @param child
+     * @param target
+     * @param dxConsumed
+     * @param dyConsumed
+     * @param dxUnconsumed
+     * @param dyUnconsumed
+     * @param type
+     */
     @Override
     public void onNestedScroll(@NonNull CoordinatorLayout coordinatorLayout, @NonNull View child, @NonNull View target, int dxConsumed, int dyConsumed, int dxUnconsumed, int dyUnconsumed, int type) {
         super.onNestedScroll(coordinatorLayout, child, target, dxConsumed, dyConsumed, dxUnconsumed, dyUnconsumed, type);

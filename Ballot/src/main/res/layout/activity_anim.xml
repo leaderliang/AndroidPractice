@@ -4,18 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
+    tools:context=".AnimActivity"
     tools:ignore="MissingConstraints">
 
-
-    <TextView
-        android:id="@+id/tv_fragment"
-        android:layout_width="match_parent"
-        android:layout_height="1000dp"
-        android:text="我是 fragment"
-        android:gravity="center"
-        android:textSize="18sp"
-         />
-
+    <Button
+        android:onClick="showAnim"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:text="查看动画"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
