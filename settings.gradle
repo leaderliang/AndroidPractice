@@ -1,2 +1,3 @@
+include ':JavaPractice'
 include ':App', ':AndroidPermission', ':HandlerThread', ':Ballot'
 rootProject.name='AndroidPractice'
