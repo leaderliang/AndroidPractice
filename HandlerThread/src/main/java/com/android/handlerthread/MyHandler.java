@@ -37,6 +37,6 @@ public class MyHandler extends Handler {
     public void handleMessage(@NonNull Message msg) {
         super.handleMessage(msg);
         String str = (String) msg.obj;
-        Log.d(TAG, Thread.currentThread().getName() + " thread receiver the message from thread: " + str);
+        Log.d(TAG, Thread.currentThread().getName() + " receiver the message from thread: " + str);
     }
 }

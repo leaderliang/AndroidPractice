@@ -63,14 +63,27 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        mHandlerThread = new HandlerThread("MainActivity-HandlerThread");
+        mHandlerThread = new HandlerThread("current thread name is handlerThread");
         mHandlerThread.start();
 
         // HandlerThread 在内部创建了消息队列，外界需要通过 Handler 的消息方式来通知 HandlerThread 执行一个具体的任务。
         final MyHandler myHandler = new MyHandler(mHandlerThread.getLooper());
         Message message = myHandler.obtainMessage();
         message.obj = Thread.currentThread().getName() + "_1";
-        myHandler.sendMessage(message);
+        myHandler.sendMessageDelayed(message,0);
+
+        Message message_1 = myHandler.obtainMessage();
+        message_1.obj = "延迟 1s 消息";
+        myHandler.sendMessageDelayed(message_1,1000);
+
+        Message message_2 = myHandler.obtainMessage();
+        message_2.obj = "延迟 3s 消息";
+        myHandler.sendMessageDelayed(message_2,3000);
+
+        Message message_3 = myHandler.obtainMessage();
+        message_3.obj = "延迟 5s 消息";
+        myHandler.sendMessageDelayed(message_3,5000);
+
 
 
         new Thread(new Runnable(){
@@ -93,18 +106,12 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+
+
     @Override
     protected void onDestroy() {
         super.onDestroy();
         mHandlerThread.quit();
-
-
-
-
-
-
-
-
 
 
 
