@@ -1,4 +1,14 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?><!--
+
+圆形定位指的是View的中心点相对于另外View中心点的位置
+
+涉及三个属性：
+
+layout_constraintCircle : 另外一个view的id
+layout_constraintCircleRadius : 半径，上图的radius
+layout_constraintCircleAngle : 角度，上图angle，范围为0-360
+根据上面上个属性就可以确定B View的位置。从图也可以知道，角度以时间12点为0，顺时针方式。-->
+
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -24,6 +34,15 @@
         android:text="World"
         app:layout_constraintCircle="@id/tvHello"
         app:layout_constraintCircleAngle="45"
+        app:layout_constraintCircleRadius="100dp" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="World"
+        app:layout_constraintCircle="@id/tvHello"
+        app:layout_constraintCircleAngle="70"
         app:layout_constraintCircleRadius="100dp" />
 
     <TextView
