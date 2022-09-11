@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Android JetPack</string>
+    <string name="second">time %l</string>
+</resources>

@@ -109,5 +109,6 @@
         <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
             android:text="危险权限可以通过 adb 命令在代码行中查看，以上从每个危险权限分组中抽出单个权限进行授权，如果同一组的任何一个权限被授权了，其他权限也自动被授权，在 android 原生系统权限测试通过，特殊权限因 android 机型众多，如需要适配的话，需要针对性的处理"
             android:layout_marginTop="5dp"/>
+
     </LinearLayout>
 </ScrollView>
